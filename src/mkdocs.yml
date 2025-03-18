@@ -33,7 +33,9 @@ theme:
     - content.action.view
     - navigation.tabs
     - navigation.top
+    - announce.dismiss
   icon:
+    logo: fontawesome/solid/graduation-cap
     repo: fontawesome/brands/github
     edit: material/pencil 
     view: material/eye
@@ -41,12 +43,11 @@ theme:
 
 repo_url: https://github.com/Students-of-MSc-Geomatics-at-TU-Delft/Students-Website
 docs_dir: docs
-edit_uri: edit/main/docs/
+edit_uri: edit/main/src/docs/
 
 markdown_extensions:
   - attr_list
   - def_list
-  # - mdx_truly_sane_lists
   - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
@@ -86,7 +87,6 @@ plugins:
   #     token: !!python/object/apply:os.getenv ["MKDOCS_GIT_COMMITTERS_APIKEY"]
   - git-revision-date-localized:
       enable_creation_date: true
-      fallback_to_build_date: true # TODO: Remove this line after the Git project is created
   # - caption
 
 nav:
