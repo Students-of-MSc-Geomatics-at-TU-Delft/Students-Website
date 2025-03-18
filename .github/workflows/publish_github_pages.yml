@@ -14,15 +14,36 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Get Python version from pyproject.toml
+        id: python-version
+        run: |
+          python_version=$(python3 -c "import toml; print(toml.load('pyproject.toml')['project']['requires-python'])")
+          echo "python-version=$python_version" >> $GITHUB_ENV
+
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          # python-version: ">=3.12"
+          python-version: ${{ env.python-version }}
+
+      - name: Setup Poetry
+        uses: pronovic/setup-poetry@v2
+        with:
+          version: "2.1.1"
+          cache-venv: "true"
+          cache-poetry: "true"
+
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy -f src/mkdocs.yml --force
+
+      # - run: pip install -r requirements.txt
+      - run: poetry install
+
+      # - run: mkdocs gh-deploy -f src/mkdocs.yml --force
+      - run: poetry run mkdocs gh-deploy -f src/mkdocs.yml --force
