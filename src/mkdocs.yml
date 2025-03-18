@@ -1,0 +1,100 @@
+site_name: geostudents
+site_description: This is a website for and by the students of the Msc Geomatics for the Build Environment at TU Delft.
+site_url: https://geomatics.bk.tudelft.nl/
+
+theme:
+  name: material
+  language: en
+  palette: 
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: green
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - content.action.edit
+    - content.action.view
+    - navigation.tabs
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
+  custom_dir: overrides # For the custom copyright
+
+repo_url: https://github.com/Students-of-MSc-Geomatics-at-TU-Delft/Students-Website
+docs_dir: docs
+edit_uri: edit/main/docs/
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  # - mdx_truly_sane_lists
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
+# extra_javascript:
+#   # LaTeX support
+#   - javascripts/katex.js
+#   - https://unpkg.com/katex@0/dist/katex.min.js
+#   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  # # LaTeX support
+  # - https://unpkg.com/katex@0/dist/katex.min.css
+  # Styling
+  - stylesheets/extra.css
+
+
+
+plugins:
+  - search
+  - glightbox
+  # - git-authors
+  # - git-committers:
+  #     repository: ZokszY/GEO1003-Shared_Notes
+  #     branch: main
+  #     token: !!python/object/apply:os.getenv ["MKDOCS_GIT_COMMITTERS_APIKEY"]
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true # TODO: Remove this line after the Git project is created
+  # - caption
+
+nav:
+  - Home: index.md
+  - Courses:
+    - Mandatory courses: content/courses/mandatory.md
+    - Elective courses: content/courses/electives.md
+  - Useful links: content/links.md
+  - Contact persons: content/contacts.md
+  - Administrative matters: content/administrative.md
+  - MOOCs: content/moocs.md

@@ -1,0 +1,24 @@
+[project]
+name = "students-website"
+version = "0.1.0"
+description = "Website for and by students from TU Delft Msc Geomatics for the Built Environment"
+authors = [
+    {name = "ZokszY",email = "136007010+ZokszY@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mkdocs-material (>=9.6.8,<10.0.0)",
+    "mkdocs-git-revision-date-localized-plugin (>=1.4.5,<2.0.0)",
+    "mkdocs-glightbox (>=0.4.0,<0.5.0)"
+]
+license = { text = "MIT" }
+
+[tool.poetry]
+package-mode = false
+packages = [{include = "students_website", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
