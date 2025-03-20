@@ -1,7 +1,6 @@
 # Recommended MOOCs for Geomatics Master Students  
 
-To fully enjoy the Geomatics Master's program and ensure you have the necessary foundational knowledge, we recommend the following MOOCs:  
-
+To fully enjoy the Geomatics Master's program and ensure you have the necessary foundational knowledge, we recommend the following MOOCs.
 ## What are MOOCs?  
 MOOCs (Massive Open Online Courses) are free online courses available to TU Delft students. They provide a platform to strengthen your mathematical background before or during your studies.  
 
