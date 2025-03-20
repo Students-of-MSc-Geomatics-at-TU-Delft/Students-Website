@@ -1,4 +1,4 @@
-# Recommended MOOCs for Geomatics Master Students  
+# MOOCs
 
 To fully enjoy the Geomatics Master's program and ensure you have the necessary foundational knowledge, we recommend the following MOOCs.
 ## What are MOOCs?  

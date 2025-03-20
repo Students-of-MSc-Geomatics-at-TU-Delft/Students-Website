@@ -1,4 +1,4 @@
-# Master Geomatics Electives
+# Electives
 
 ## GEO5010 - Research Assignment (2 ECTS)  
 *Course Coordinator: Clara Garcia Sanchez*  
