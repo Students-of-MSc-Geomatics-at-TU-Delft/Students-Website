@@ -94,7 +94,10 @@ nav:
   - Courses:
     - Mandatory courses: content/courses/mandatory.md
     - Elective courses: content/courses/electives.md
+    - External electiv courses: content/courses/externelectives.md
+    - Electives approval: content/courses/electivesapproval.md
   - Useful links: content/links.md
+  - Useful documents: content/documents.md
   - Contact persons: content/contacts.md
   - Administrative matters: content/administrative.md
   - MOOCs: content/moocs.md
